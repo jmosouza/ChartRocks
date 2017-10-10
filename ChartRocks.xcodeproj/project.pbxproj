@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5CF55A79F9714562C13C0832 /* Pods_ChartRocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEB4C57DB64A392D525C4949 /* Pods_ChartRocks.framework */; };
 		CF5CD1CF1F8AAFE00027F7DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5CD1CE1F8AAFE00027F7DA /* AppDelegate.swift */; };
 		CF5CD1D11F8AAFE00027F7DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5CD1D01F8AAFE00027F7DA /* ViewController.swift */; };
 		CF5CD1D41F8AAFE00027F7DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF5CD1D21F8AAFE00027F7DA /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		25AF891427DED7188D8F7DEB /* Pods-ChartRocks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChartRocks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChartRocks/Pods-ChartRocks.debug.xcconfig"; sourceTree = "<group>"; };
+		A849F88DC60AB7475EDAEAB4 /* Pods-ChartRocks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChartRocks.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChartRocks/Pods-ChartRocks.release.xcconfig"; sourceTree = "<group>"; };
+		AEB4C57DB64A392D525C4949 /* Pods_ChartRocks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChartRocks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF5CD1CB1F8AAFE00027F7DA /* ChartRocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChartRocks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF5CD1CE1F8AAFE00027F7DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF5CD1D01F8AAFE00027F7DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CF55A79F9714562C13C0832 /* Pods_ChartRocks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		831BEFCA021FA854AA5AD7F9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				25AF891427DED7188D8F7DEB /* Pods-ChartRocks.debug.xcconfig */,
+				A849F88DC60AB7475EDAEAB4 /* Pods-ChartRocks.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9CB0D6389E53559F5E238C2E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AEB4C57DB64A392D525C4949 /* Pods_ChartRocks.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CF5CD1C21F8AAFE00027F7DA = {
 			isa = PBXGroup;
 			children = (
 				CF5CD1CD1F8AAFE00027F7DA /* ChartRocks */,
 				CF5CD1CC1F8AAFE00027F7DA /* Products */,
+				831BEFCA021FA854AA5AD7F9 /* Pods */,
+				9CB0D6389E53559F5E238C2E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF5CD1DD1F8AAFE10027F7DA /* Build configuration list for PBXNativeTarget "ChartRocks" */;
 			buildPhases = (
+				C651468CFE8F1EDCF9B42D85 /* [CP] Check Pods Manifest.lock */,
 				CF5CD1C71F8AAFE00027F7DA /* Sources */,
 				CF5CD1C81F8AAFE00027F7DA /* Frameworks */,
 				CF5CD1C91F8AAFE00027F7DA /* Resources */,
+				117F47C2A9003A75B21501F1 /* [CP] Embed Pods Frameworks */,
+				D66A5DC57FBE6C70FEB08F8D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		117F47C2A9003A75B21501F1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ChartRocks/Pods-ChartRocks-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChartRocks/Pods-ChartRocks-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C651468CFE8F1EDCF9B42D85 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChartRocks-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D66A5DC57FBE6C70FEB08F8D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChartRocks/Pods-ChartRocks-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CF5CD1C71F8AAFE00027F7DA /* Sources */ = {
@@ -272,11 +353,13 @@
 		};
 		CF5CD1DE1F8AAFE10027F7DA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25AF891427DED7188D8F7DEB /* Pods-ChartRocks.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2LWKNR2T2F;
 				INFOPLIST_FILE = ChartRocks/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.ChartRocks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -287,11 +370,13 @@
 		};
 		CF5CD1DF1F8AAFE10027F7DA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A849F88DC60AB7475EDAEAB4 /* Pods-ChartRocks.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2LWKNR2T2F;
 				INFOPLIST_FILE = ChartRocks/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.ChartRocks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
