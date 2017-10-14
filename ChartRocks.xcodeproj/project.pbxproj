@@ -14,6 +14,7 @@
 		CF5CD1D61F8AAFE00027F7DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF5CD1D51F8AAFE00027F7DA /* Assets.xcassets */; };
 		CF5CD1D91F8AAFE10027F7DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF5CD1D71F8AAFE10027F7DA /* LaunchScreen.storyboard */; };
 		CF836C031F8E8A3E00AAD8B3 /* UnitValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF836C021F8E8A3E00AAD8B3 /* UnitValueFormatter.swift */; };
+		CFCD9E2B1F926388000ED342 /* ForceChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCD9E2A1F926388000ED342 /* ForceChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		CF5CD1D81F8AAFE10027F7DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF5CD1DA1F8AAFE10027F7DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF836C021F8E8A3E00AAD8B3 /* UnitValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitValueFormatter.swift; sourceTree = "<group>"; };
+		CFCD9E2A1F926388000ED342 /* ForceChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			children = (
 				CF5CD1CE1F8AAFE00027F7DA /* AppDelegate.swift */,
 				CF5CD1D01F8AAFE00027F7DA /* ViewController.swift */,
+				CFCD9E2A1F926388000ED342 /* ForceChartView.swift */,
 				CF836C021F8E8A3E00AAD8B3 /* UnitValueFormatter.swift */,
 				CF5CD1D21F8AAFE00027F7DA /* Main.storyboard */,
 				CF5CD1D51F8AAFE00027F7DA /* Assets.xcassets */,
@@ -220,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFCD9E2B1F926388000ED342 /* ForceChartView.swift in Sources */,
 				CF5CD1D11F8AAFE00027F7DA /* ViewController.swift in Sources */,
 				CF5CD1CF1F8AAFE00027F7DA /* AppDelegate.swift in Sources */,
 				CF836C031F8E8A3E00AAD8B3 /* UnitValueFormatter.swift in Sources */,
