@@ -18,8 +18,12 @@ class ForceChartView: LineChartView {
     override func didMoveToWindow() {
         super.didMoveToWindow()
 
-        // Configure empty dataset
-        let dataSet = LineChartDataSet()
+        // Fill the first range of 5 in X axis.
+        let entry1 = ChartDataEntry(x: 0, y: 0)
+        let entry2 = ChartDataEntry(x: 5, y: 0)
+        let dataSet = LineChartDataSet(values: [entry1, entry2], label: nil)
+        
+        // Configure and add the data set.
         dataSet.lineWidth = 2
         dataSet.drawValuesEnabled = false
         dataSet.drawCirclesEnabled = false
@@ -28,27 +32,27 @@ class ForceChartView: LineChartView {
 
         // Configure styles
         chart.drawMarkers = false
-        chart.drawGridBackgroundEnabled = false
         chart.chartDescription = nil
+        chart.drawGridBackgroundEnabled = false
         chart.legend.enabled = false
-        chart.xAxis.axisMinimum = 0
-        chart.xAxis.axisMaximum = 5
         chart.xAxis.granularity = 1
-        // chart.xAxis.drawLabelsEnabled = false
+        chart.xAxis.drawLabelsEnabled = false
         chart.xAxis.drawGridLinesEnabled = false
         chart.leftAxis.axisMinimum = 0
-        chart.leftAxis.axisMaximum = 50
+        chart.leftAxis.axisMaximum = 100
         chart.leftAxis.valueFormatter = UnitValueFormatter(rightSymbol: "kg")
         chart.rightAxis.enabled = false
     }
     
     func append(x: Double, y: Double) {
-        let entry = ChartDataEntry(x: x, y: y)
+        let entry = ChartDataEntry(x: x + 5, y: y)
         chart.data?.addEntry(entry, dataSetIndex: 0)
         chart.notifyDataSetChanged()
         
-        // NOT WORKING: Scroll to (x - 5)
-        chart.moveViewToX(x - 5)
+        // Scroll to end of chart.
+        chart.moveViewToX(x)
+        chart.setVisibleXRangeMaximum(5)
+        chart.setVisibleXRangeMinimum(5)
     }
     
 }
