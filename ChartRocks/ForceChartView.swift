@@ -18,12 +18,8 @@ class ForceChartView: LineChartView {
     override func didMoveToWindow() {
         super.didMoveToWindow()
 
-        // Fill the first range of 5 in X axis.
-        let entry1 = ChartDataEntry(x: 0, y: 0)
-        let entry2 = ChartDataEntry(x: 5, y: 0)
-        let dataSet = LineChartDataSet(values: [entry1, entry2], label: nil)
-        
         // Configure and add the data set.
+        let dataSet = LineChartDataSet()
         dataSet.lineWidth = 2
         dataSet.drawValuesEnabled = false
         dataSet.drawCirclesEnabled = false
@@ -45,12 +41,12 @@ class ForceChartView: LineChartView {
     }
     
     func append(x: Double, y: Double) {
-        let entry = ChartDataEntry(x: x + 5, y: y)
+        let entry = ChartDataEntry(x: x, y: y)
         chart.data?.addEntry(entry, dataSetIndex: 0)
         chart.notifyDataSetChanged()
         
         // Scroll to end of chart.
-        chart.moveViewToX(x)
+        chart.moveViewToX(x - 5)
         chart.setVisibleXRangeMaximum(5)
         chart.setVisibleXRangeMinimum(5)
     }

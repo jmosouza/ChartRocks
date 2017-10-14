@@ -28,6 +28,10 @@ class ViewController: UIViewController {
             let y = Double(arc4random() / 100_000_000)
             self.chart.append(x: x, y: y)
         })
+        
+        _ = Timer.scheduledTimer(withTimeInterval: 7, repeats: false, block: { (_) in
+            self.timer.invalidate()
+        })
     }
 
 }
